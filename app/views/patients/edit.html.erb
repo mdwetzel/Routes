@@ -1,0 +1,10 @@
+<h1><%= "Edit #{@patient.name}" %></h1>
+
+<%= form_for @patient do |f| %>
+<%= f.label			:name %>
+<%= f.text_field	:name %>
+<%= f.submit %>
+<% end %>
+
+<br>
+<%= link_to "Destroy", destroy_patient_path, method: :delete, confirm: "Are you sure?" %>

@@ -1,0 +1,12 @@
+<h1><%= pluralize(@patients.count, "Patient")%></h1>
+
+<% @patients.each do |patient| %>
+<%= link_to patient.name, patient %>
+<br>
+<% end %>
+
+<br>
+
+<%= link_to "New Patient", new_patient_path %>
+<br>
+<%= link_to "Patients", patients_path %>
